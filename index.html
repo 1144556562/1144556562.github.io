@@ -37,7 +37,7 @@
 
     body {
       font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: linear-gradient(135deg, var(--primary) 0%, #ffffff 50%);
+      background: linear-gradient(135deg, var(--primary) 0%, #ff0000 50%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -129,16 +129,19 @@
     }
 
     .action-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: var(--primary);
-      color: var(--light);
-      border-radius: calc(var(--radius)/2);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
+  /* 原有属性保留 */
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem; /* 原0.5rem 1rem */
+  font-size: 0.875rem; /* 新增字体缩小 */
+  background: var(--primary);
+  color: var(--light);
+  border-radius: calc(var(--radius)/2);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  gap: 0.375rem; /* 新增图标间距控制 */
+}
 
     .action-btn:hover {
       background: var(--primary-hover);
@@ -200,7 +203,7 @@
 
             <td>
               <div class="action-group">
-                <a href="#" class="action-btn" target="blank">立即办理</a>
+                <a href="http://gx.10086.cn/gxwd/buyers/buyers_view_shop.html?shopId=2c94d2aa81159c4801812a31109d10df" class="action-btn" target="blank">立即办理</a>
               </div>
             </td>
           </tr>
@@ -209,7 +212,7 @@
 
             <td>
               <div class="action-group">
-                <a href="#" class="action-btn" target="blank">立即办理</a>
+                <a href="https://wx.10086.cn/website/spa/main/alreadyService/index?cuid=939C47E3D79658D04134B69318A48A0F%7C0&cuid_galaxy2=939C47E3D79658D04134B69318A48A0F%7C0&cuid_gid=&timestamp=1679064901153&_client_version=12.37.1.0" class="action-btn" target="blank">立即办理</a>
               </div>
             </td>
           </tr>
@@ -218,7 +221,7 @@
 
             <td>
               <div class="action-group">
-                <a href="#" class="action-btn" target="blank">立即办理</a>
+                <a href="https://wx.10086.cn/website/businessPlatform/flowShop" class="action-btn" target="blank">立即办理</a>
               </div>
             </td>
           </tr>
@@ -226,7 +229,7 @@
             <td>资费公示</td>
             <td>
               <div class="action-group">
-                <a href="#" class="action-btn" target="blank">立即办理</a>
+                <a href="http://h.app.coc.10086.cn/cmcc-app/tariffZoneCP/tariffZoneCPNQD.html?prov=771" class="action-btn" target="blank">立即办理</a>
               </div>
             </td>
           </tr>
