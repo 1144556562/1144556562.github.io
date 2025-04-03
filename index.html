@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>广西移动 - 业务推荐中心</title>
   <meta name="keywords" content="广西移动,流量套餐,5G套餐,老年优惠,业务办理">
   <meta name="description" content="广西移动官方业务推荐平台，提供最新5G套餐、定向流量、老年专属优惠等移动业务在线办理服务">
-  <style>
+  <!-- <style>
     .disclaimer p {
       text-align: center;
     }
@@ -178,7 +179,168 @@
         font-size: 1.25rem;
       }
     }
-  </style>
+  </style> -->
+<style>
+  :root {
+    --primary: #0288d1;
+    --primary-hover: #0080ff;
+    --text: #1e293b;
+    --light: #ffffff;
+    --border: #006eff;
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, var(--primary) 0%, #ffffff 30%);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-md);
+  }
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: #0288d1;
+    border-radius: var(--radius);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease;
+    width: fit-content;
+    margin: var(--space-md) auto;
+  }
+
+  .brand:hover {
+    transform: translateY(-2px);
+  }
+
+  .brand__title {
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .brand__flag {
+    background: var(--light);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: calc(var(--radius) / 2);
+    font-weight: 700;
+  }
+
+  .section {
+    background: var(--light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+  }
+
+  .section__header {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--primary);
+    color: var(--light);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .section__body {
+    padding: var(--space-md);
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--light);
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .data-table th {
+    background: #f8fafc;
+    font-weight: 600;
+  }
+
+  .action-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    background: var(--primary);
+    color: var(--light);
+    border-radius: calc(var(--radius) / 2);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    gap: 0.375rem;
+  }
+
+  .action-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .disclaimer {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    padding: var(--space-md);
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      padding: var(--space-sm);
+    }
+
+    .data-table {
+      display: block;
+      overflow-x: auto;
+    }
+
+    .action-group {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .action-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .brand__title {
+      font-size: 1.25rem;
+    }
+  }
+</style>
 </head>
 
 <body>
