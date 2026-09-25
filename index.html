@@ -6,191 +6,18 @@
     <title>广西移动 - 业务推荐中心</title>
     <meta name="keywords" content="广西移动,流量套餐,5G套餐,老年优惠,业务办理">
     <meta name="description" content="广西移动官方业务推荐平台，提供最新5G套餐、定向流量、老年专属优惠等移动业务在线办理服务">
-    <!-- <style>
-    .disclaimer p {
-      text-align: center;
-    }
-
-    .weixin {
-      color: rgba(58, 55, 55, 0.899);
-    }
-
-    :root {
-      --primary: #0288d1;
-      --primary-hover: #0080ff;
-      --text: #1e293b;
-      --light: #ffffff;
-      --border: #006eff;
-      --radius: 8px;
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      --space-sm: 0.75rem;
-      --space-md: 1.5rem;
-      --space-lg: 2rem;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: linear-gradient(135deg, var(--primary) 0%, #ffffff 30%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: var(--space-md);
-    }
-
-    .brand {
-      display: flex;
-      /* 从 inline-flex 改为标准 flex 容器 */
-      justify-content: center;
-      /* 新增：水平居中内部元素 */
-      margin: var(--space-md) auto;
-      /* 左右自动外边距实现容器自身居中 */
-      align-items: center;
-      gap: var(--space-sm);
-      padding: var(--space-sm) var(--space-md);
-      background: #0288d1;
-      border-radius: var(--radius);
-      backdrop-filter: blur(4px);
-      transition: transform 0.2s ease;
-      width: fit-content;
-      /* 新增：使容器宽度适应内容 */
-    }
-
-    .brand:hover {
-      transform: translateY(-2px);
-    }
-
-    .brand__title {
-      color: var(--light);
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    .brand__flag {
-      background: var(--light);
-      color: var(--primary);
-      padding: 0.25rem 0.75rem;
-      border-radius: calc(var(--radius)/2);
-      font-weight: 700;
-    }
-
-    .section {
-      background: var(--light);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: var(--space-md);
-      overflow: hidden;
-    }
-
-    .section__header {
-      padding: var(--space-sm) var(--space-md);
-      background: var(--primary);
-      color: var(--light);
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .section__body {
-      padding: var(--space-md);
-    }
-
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--light);
-    }
-
-    .data-table th,
-    .data-table td {
-      padding: var(--space-sm);
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-
-    .data-table th {
-      background: #f8fafc;
-      font-weight: 600;
-    }
-
-    .action-group {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .action-btn {
-  /* 原有属性保留 */
-  display: inline-flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem; /* 原0.5rem 1rem */
-  font-size: 0.875rem; /* 新增字体缩小 */
-  background: var(--primary);
-  color: var(--light);
-  border-radius: calc(var(--radius)/2);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  gap: 0.375rem; /* 新增图标间距控制 */
-}
-
-    .action-btn:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    .disclaimer {
-      font-size: 0.875rem;
-      color: #64748b;
-      line-height: 1.6;
-      padding: var(--space-md);
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        padding: var(--space-sm);
-      }
-
-      .data-table {
-        display: block;
-        overflow-x: auto;
-      }
-
-      .action-group {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .action-btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .brand__title {
-        font-size: 1.25rem;
-      }
-    }
-  </style> -->
     <style>
         :root {
             --primary: #0288d1;
-            --primary-hover: #0080ff;
-            --text: #1e293b;
-            --light: #ffffff;
-            --border: #006eff;
-            --radius: 8px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --space-sm: 0.75rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
+            --primary-dark: #0277bd;
+            --primary-light: #e3f2fd;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --bg: #f4f7fa;
+            --card: #ffffff;
+            --line: #eef2f6;
+            --radius: 14px;
+            --shadow: 0 1px 3px rgba(15, 40, 70, 0.06), 0 8px 24px rgba(15, 40, 70, 0.06);
         }
 
         * {
@@ -201,142 +28,382 @@
 
         body {
             font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, var(--primary) 0%, #ffffff 30%);
+            background: var(--bg);
+            background-image: radial-gradient(1000px 400px at 50% -100px, rgba(2, 136, 209, 0.10), transparent);
             color: var(--text);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 760px;
             margin: 0 auto;
-            padding: var(--space-md);
+            padding: 2rem 1.25rem 3rem;
         }
 
-        .brand {
+        /* ---------- 头部横幅 ---------- */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #0277bd 0%, #0288d1 45%, #29b6f6 100%);
+            border-radius: 18px;
+            padding: 1.75rem 1.75rem 1.9rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(2, 119, 189, 0.28);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        .hero::before {
+            width: 180px;
+            height: 180px;
+            top: -70px;
+            right: -40px;
+        }
+
+        .hero::after {
+            width: 120px;
+            height: 120px;
+            bottom: -55px;
+            right: 90px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .hero .brand {
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-md);
-            background: #0288d1;
-            border-radius: var(--radius);
-            backdrop-filter: blur(4px);
-            transition: transform 0.2s ease;
-            width: fit-content;
-            margin: var(--space-md) auto;
+            gap: 0.75rem;
         }
 
-        .brand:hover {
-            transform: translateY(-2px);
+        .hero .brand__mark {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(4px);
+            box-shadow: none;
+        }
+
+        .hero .brand__flag {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .hero__sub {
+            margin-top: 0.55rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
+
+        .brand__mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0288d1, #03a9f4);
+            color: #fff;
+            font-size: 1.35rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(2, 136, 209, 0.35);
         }
 
         .brand__title {
-            color: var(--light);
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #fff;
         }
 
         .brand__flag {
-            background: var(--light);
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: var(--primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: calc(var(--radius) / 2);
-            font-weight: 700;
+            background: var(--primary-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            transform: translateY(2px);
         }
 
+        .header__sub {
+            margin-top: 0.4rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ---------- 卡片区块 ---------- */
         .section {
-            background: var(--light);
+            background: var(--card);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            margin-bottom: var(--space-md);
+            margin-bottom: 1.5rem;
             overflow: hidden;
         }
 
         .section__header {
-            padding: var(--space-sm) var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(180deg, #fbfdfe, #f6f9fc);
+        }
+
+        .section__header::before {
+            content: "";
+            width: 4px;
+            height: 18px;
+            border-radius: 2px;
             background: var(--primary);
-            color: var(--light);
-            font-size: 1.25rem;
-            font-weight: 600;
+        }
+
+        .section__title {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .section__header .section__note {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 400;
         }
 
         .section__body {
-            padding: var(--space-md);
+            padding: 0.25rem 1.5rem;
         }
 
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--light);
+        /* ---------- 业务条目 ---------- */
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 0.75rem;
+            margin: 0 -0.75rem;
+            border-bottom: 1px solid var(--line);
+            border-radius: 10px;
+            transition: background 0.15s ease;
         }
 
-        .data-table th,
-        .data-table td {
-            padding: var(--space-sm);
-            border-bottom: 1px solid var(--border);
-            text-align: left;
-        }
-
-        .data-table th {
+        .item:hover {
             background: #f8fafc;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item__info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .item__name {
             font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .item__desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-top: 0.15rem;
+        }
+
+        .item__tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            color: var(--primary);
+            background: var(--primary-light);
+            border-radius: 999px;
+            padding: 0.1rem 0.5rem;
+            margin-left: 0.4rem;
+            transform: translateY(-1px);
         }
 
         .action-group {
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-shrink: 0;
         }
 
         .action-btn {
             display: inline-flex;
             align-items: center;
-            padding: 0.375rem 0.75rem;
-            font-size: 0.875rem;
-            background: var(--primary);
-            color: var(--light);
-            border-radius: calc(var(--radius) / 2);
+            padding: 0.4rem 1.1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #0288d1, #29b6f6);
+            color: #fff;
+            border-radius: 999px;
             text-decoration: none;
             transition: all 0.2s ease;
             white-space: nowrap;
-            gap: 0.375rem;
+            box-shadow: 0 2px 6px rgba(2, 136, 209, 0.22);
         }
 
         .action-btn:hover {
-            background: var(--primary-hover);
+            background: linear-gradient(135deg, #0277bd, #03a9f4);
             transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(2, 136, 209, 0.32);
         }
 
+        .action-btn--ghost {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .action-btn--ghost:hover {
+            background: #d0e9fb;
+            color: var(--primary-dark);
+            box-shadow: none;
+        }
+
+        /* ---------- 快捷服务网格 ---------- */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .quick-card {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 1.1rem;
+            background: #f8fafc;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .quick-card:hover {
+            background: #fff;
+            border-color: #b3dcf5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(2, 136, 209, 0.12);
+        }
+
+        .quick-card__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .quick-card__icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .quick-card__icon--blue {
+            background: #e3f2fd;
+            color: #0288d1;
+        }
+
+        .quick-card__icon--red {
+            background: #fdecea;
+            color: #e53935;
+        }
+
+        .quick-card__icon--green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .quick-card__icon--purple {
+            background: #f3e5f5;
+            color: #8e24aa;
+        }
+
+        .quick-card__name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .quick-card__arrow {
+            margin-left: auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1;
+            transition: transform 0.2s ease;
+        }
+
+        .quick-card:hover .quick-card__arrow {
+            transform: translateX(3px);
+            color: var(--primary);
+        }
+
+        /* ---------- 免责声明 ---------- */
         .disclaimer {
-            font-size: 0.875rem;
-            color: #64748b;
-            line-height: 1.6;
-            padding: var(--space-md);
+            padding: 1.25rem 1.5rem 1.5rem;
             text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
 
+        .disclaimer strong {
+            color: var(--text);
+        }
+
+        /* ---------- 响应式 ---------- */
         @media (max-width: 640px) {
             .container {
-                padding: var(--space-sm);
+                padding: 1rem 0.9rem 2.5rem;
             }
 
-            .data-table {
-                display: block;
-                overflow-x: auto;
+            .hero {
+                padding: 1.4rem 1.2rem 1.5rem;
+            }
+
+            .section__header,
+            .disclaimer {
+                padding-left: 1.1rem;
+                padding-right: 1.1rem;
+            }
+
+            .section__body {
+                padding: 0.15rem 1.1rem;
+            }
+
+            .quick-grid {
+                padding: 1rem 1.1rem;
+                gap: 0.7rem;
+            }
+
+            .item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.6rem;
             }
 
             .action-group {
-                flex-direction: column;
-                width: 100%;
+                justify-content: flex-start;
             }
 
             .action-btn {
-                width: 100%;
+                flex: 1;
                 justify-content: center;
             }
 
             .brand__title {
-                font-size: 1.25rem;
+                font-size: 1.35rem;
             }
         }
     </style>
@@ -344,243 +411,195 @@
 
 <body>
     <div class="container">
-        <header>
+        <header class="hero">
             <div class="brand">
+                <span class="brand__mark">移</span>
                 <span class="brand__title">广西移动</span>
                 <span class="brand__flag">活动专区</span>
             </div>
+            <p class="hero__sub">精选套餐 · 流量优惠 · 在线办理</p>
         </header>
 
         <section class="section">
             <div class="section__header">
-                <h5> <b class="weixin">网站负责人微信:</b>Yd55656</h5>
+                <span class="section__title">快捷服务</span>
+                <span class="section__note">网站负责人微信：Yd55656</span>
             </div>
-            <div class="section__body">
-                <table class="data-table">
-                    <!-- 表格内容保持不变 -->
-                    <tr>
-                        <td>广西码店</td>
-
-                        <td>
-                            <div class="action-group">
-                                <a href="http://gx.10086.cn/gxwd/buyers/buyers_view_shop.html?shopId=2c94d2aa81159c4801812a31109d10df"
-                                    class="action-btn" target="blank">立即办理</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>业务退订</td>
-
-                        <td>
-                            <div class="action-group">
-                                <a href="https://wx.10086.cn/website/spa/main/alreadyService/index?cuid=939C47E3D79658D04134B69318A48A0F%7C0&cuid_galaxy2=939C47E3D79658D04134B69318A48A0F%7C0&cuid_gid=&timestamp=1679064901153&_client_version=12.37.1.0"
-                                    class="action-btn" target="blank">立即办理</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>流量专区</td>
-
-                        <td>
-                            <div class="action-group">
-                                <a href="https://wx.10086.cn/website/businessPlatform/flowShop" class="action-btn"
-                                    target="blank">立即办理</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>资费公示</td>
-                        <td>
-                            <div class="action-group">
-                                <a href="http://h.app.coc.10086.cn/cmcc-app/tariffZoneCP/tariffZoneCPNQD.html?prov=771"
-                                    class="action-btn" target="blank">立即办理</a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+            <div class="quick-grid">
+                <a class="quick-card" href="http://gx.10086.cn/gxwd/buyers/buyers_view_shop.html?shopId=2c94d2aa81159c4801812a31109d10df" target="_blank">
+                    <span class="quick-card__icon quick-card__icon--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+                    <span class="quick-card__name">广西码店</span>
+                    <span class="quick-card__arrow">›</span>
+                </a>
+                <a class="quick-card" href="https://wx.10086.cn/website/spa/main/alreadyService/index?cuid=939C47E3D79658D04134B69318A48A0F%7C0&cuid_galaxy2=939C47E3D79658D04134B69318A48A0F%7C0&cuid_gid=&timestamp=1679064901153&_client_version=12.37.1.0" target="_blank">
+                    <span class="quick-card__icon quick-card__icon--red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
+                    <span class="quick-card__name">业务退订</span>
+                    <span class="quick-card__arrow">›</span>
+                </a>
+                <a class="quick-card" href="https://wx.10086.cn/website/businessPlatform/flowShop" target="_blank">
+                    <span class="quick-card__icon quick-card__icon--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+                    <span class="quick-card__name">流量专区</span>
+                    <span class="quick-card__arrow">›</span>
+                </a>
+                <a class="quick-card" href="http://h.app.coc.10086.cn/cmcc-app/tariffZoneCP/tariffZoneCPNQD.html?prov=771" target="_blank">
+                    <span class="quick-card__icon quick-card__icon--purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8"/><path d="M8 11h8"/><path d="M8 16h5"/></svg></span>
+                    <span class="quick-card__name">资费公示</span>
+                    <span class="quick-card__arrow">›</span>
+                </a>
             </div>
         </section>
 
         <section class="section">
-            <div class="section__header">热门业务推荐</div>
+            <div class="section__header">
+                <span class="section__title">热门业务推荐</span>
+            </div>
             <div class="section__body">
-                <table class="data-table">
-                    <!-- <tr>
-                        <td>5G通行证</td>
-                        <td>30元10G通用+30G定向流量</td>
-                        <td>
-                            <div class="action-group">
-                                <a href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94cba37a9f3372017abdab72870025,shop_id=2c94d2aa81159c4801812a31109d10df&flag=1&spreadQd=20_copyurl_hd&touch=20_shopzx_touch&shareChannel=20_gridding_qd&ad_id=2c94beae7aadb42c017abdb0a1813e15&urlBs=04ad219434b2bff111635ec66f247391&isGridding=&busiOpId=&taskId=null&sellerXyDist=null&click=&jumpFlag=&assistantUserInfo=null"
-                                    class="action-btn" target="blank">立即办理</a>
-                                <a href="https://apiserv.cmicrwx.cn/cmcc/rights/5gpass/#/home" class="action-btn"
-                                    target="blank">会员领取</a>
-                            </div>
-                        </td>
-                    </tr> -->
-
-                    <tr>
-                        <td>动感潮玩包</td>
-                        <td>15元10G，25元20G，不能叠加</td>
-                        <td>
-                            <div class="action-group"><a class="action-btn" target="blank"
-                                    href="https://dev.coc.10086.cn/coc/canvas/package-h5-canvas/online/dgddcwb15y?pageId=1630762785986191360&amp;channelId=P00000058450">15元办理链接</a>
-                                <a class="action-btn" target="blank"
-                                    href="https://dev.coc.10086.cn/coc/canvas/package-h5-canvas/online/dgddcwb25y?pageId=1630773920493191168&amp;channelId=P00000058450">25元办理链接</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>咪咕视频</td>
-                        <td>3个月会员,到期可重新办理</td>
-                        <td>
-                            <div class="action-group"><a class="action-btn" target="blank"
-                                    href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec278695b4f01786d76fc5e0001,shop_id=2c94d2aa81159c4801812a31109d10df&amp;flag=1&amp;spreadQd=20_copyurl_hd&amp;touch=20_shopzx_touch&amp;shareChannel=20_gridding_qd&amp;ad_id=8a36962c78636d5601786dfd56510012&amp;urlBs=04ad219434b2bff111635ec66f247391&amp;isGridding=&amp;busiOpId=&amp;taskId=null&amp;sellerXyDist=null&amp;click=&amp;jumpFlag=&amp;assistantUserInfo=null">咪咕链接1</a><a
-                                    class="action-btn" target="blank"
-                                    href="https://www.gx.10086.cn/zt-portal/gxhzg/portal/hzg_wap/template/20211012161222169">咪咕链接2</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>数字生活包</td>
-                        <td>长期0元体验包</td>
-                        <td>
-                            <div class="action-group"><a class="action-btn" target="blank"
-                                    href="https://dev.coc.10086.cn/coc/web2/numericalLiving/?channelId=P00000007738&amp;pageId=1672768668882481152">办理链接</a><a
-                                    class="action-btn" target="blank"
-                                    href="https://wx.10086.cn/website/businessPlatform/shopDetail?productId=2133510&amp;productCode=15379866&amp;fromRecommend=3&amp;pageSource=100&amp;pageid=af6f61fe725d43fe9059058f739224b4&amp;shopP=">办理链接2</a>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                </table>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">动感潮玩包</div>
+                        <div class="item__desc">15元10G，25元20G，不能叠加</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://dev.coc.10086.cn/coc/canvas/package-h5-canvas/online/dgddcwb15y?pageId=1630762785986191360&amp;channelId=P00000058450">15元办理</a>
+                        <a class="action-btn--ghost action-btn" target="_blank" href="https://dev.coc.10086.cn/coc/canvas/package-h5-canvas/online/dgddcwb25y?pageId=1630773920493191168&amp;channelId=P00000058450">25元办理</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">咪咕视频</div>
+                        <div class="item__desc">3个月会员，到期可重新办理</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec278695b4f01786d76fc5e0001,shop_id=2c94d2aa81159c4801812a31109d10df&amp;flag=1&amp;spreadQd=20_copyurl_hd&amp;touch=20_shopzx_touch&amp;shareChannel=20_gridding_qd&amp;ad_id=8a36962c78636d5601786dfd56510012&amp;urlBs=04ad219434b2bff111635ec66f247391&amp;isGridding=&amp;busiOpId=&amp;taskId=null&amp;sellerXyDist=null&amp;click=&amp;jumpFlag=&amp;assistantUserInfo=null">咪咕链接1</a>
+                        <a class="action-btn--ghost action-btn" target="_blank" href="https://www.gx.10086.cn/zt-portal/gxhzg/portal/hzg_wap/template/20211012161222169">咪咕链接2</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">数字生活包</div>
+                        <div class="item__desc">长期0元体验包</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://dev.coc.10086.cn/coc/web2/numericalLiving/?channelId=P00000007738&amp;pageId=1672768668882481152">办理链接</a>
+                        <a class="action-btn--ghost action-btn" target="_blank" href="https://wx.10086.cn/website/businessPlatform/shopDetail?productId=2133510&amp;productCode=15379866&amp;fromRecommend=3&amp;pageSource=100&amp;pageid=af6f61fe725d43fe9059058f739224b4&amp;shopP=">办理链接2</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section__header">网龄流量</div>
+            <div class="section__header">
+                <span class="section__title">网龄流量</span>
+            </div>
             <div class="section__body">
-                <table class="data-table">
-                    <tr>
-                        <td>6个月均消费，额外加5元</td>
-                        <td>5元15G到25G</td>
-                        <td>合约24个月</td>
-                        <td>
-                            <div class="action-group">
-                                <a class="action-btn" target="blank"
-                                    href="http://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec297ac51da0197ca3a7d2704d6,shop_id=2c94d2aa81159c4801812a31109d10df&flag=1&spreadQd=&touch=&shareChannel=&ad_id=2c94beae97ad92660197caaf39505861&urlBs=&isGridding=&busiOpId=&taskId=&sellerXyDist=&click=&jumpFlag=&assistantUserInfo=&isWcd=&shopType=undefined&knwlgId=undefined">办理链接</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6个月均消费，额外加10元</td>
-                        <td>10元30G到60G</td>
-                        <td>合约24个月</td>
-                        <td>
-                            <div class="action-group">
-                                <a class="action-btn" target="blank"
-                                    href="http://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec297ac51da0197ca3a7d2704d6,shop_id=2c94d2aa81159c4801812a31109d10df&flag=1&spreadQd=&touch=&shareChannel=&ad_id=2c94beae97ad92660197caaf39505861&urlBs=&isGridding=&busiOpId=&taskId=&sellerXyDist=&click=&jumpFlag=&assistantUserInfo=&isWcd=&shopType=undefined&knwlgId=undefined">办理链接</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6个月均消费，额外加1元20G</td>
-                        <td>找客服办理</td>
-                    </tr>
-                    <tr>
-                        <td>6个月均消费，额外加1元60G</td>
-                        <td>网龄回馈202512焕新版</td>
-                        <td>找客服办理</td>
-                    </tr>
-                    <tr>
-                        <td>6个月均消费，额外加10元100G</td>
-                        <td>网龄回馈202512焕新版</td>
-                        <td>找客服办理</td>
-                    </tr>
-                    <tr>
-                        <td>6个月均消费，额外加15元200G</td>
-                        <td>网龄回馈202512焕新版</td>
-                        <td>找客服办理</td>
-                    </tr>
-
-                </table>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加5元<span class="item__tag">合约24个月</span></div>
+                        <div class="item__desc">5元15G到25G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="http://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec297ac51da0197ca3a7d2704d6,shop_id=2c94d2aa81159c4801812a31109d10df&flag=1&spreadQd=&touch=&shareChannel=&ad_id=2c94beae97ad92660197caaf39505861&urlBs=&isGridding=&busiOpId=&taskId=&sellerXyDist=&click=&jumpFlag=&assistantUserInfo=&isWcd=&shopType=undefined&knwlgId=undefined">办理链接</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加10元<span class="item__tag">合约24个月</span></div>
+                        <div class="item__desc">10元30G到60G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="http://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec297ac51da0197ca3a7d2704d6,shop_id=2c94d2aa81159c4801812a31109d10df&flag=1&spreadQd=&touch=&shareChannel=&ad_id=2c94beae97ad92660197caaf39505861&urlBs=&isGridding=&busiOpId=&taskId=&sellerXyDist=&click=&jumpFlag=&assistantUserInfo=&isWcd=&shopType=undefined&knwlgId=undefined">办理链接</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加1元20G</div>
+                        <div class="item__desc">找客服办理</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加1元60G</div>
+                        <div class="item__desc">网龄回馈202512焕新版 · 找客服办理</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加10元100G</div>
+                        <div class="item__desc">网龄回馈202512焕新版 · 找客服办理</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">6个月均消费，额外加15元200G</div>
+                        <div class="item__desc">网龄回馈202512焕新版 · 找客服办理</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section__header">国内流量</div>
+            <div class="section__header">
+                <span class="section__title">国内流量</span>
+            </div>
             <div class="section__body">
-                <table class="data-table">
-                    <!-- <tr>
-                        <td>新业务10元</td>
-                        <td>首月1元，10G区内流量</td>
-                        <td>
-                            <div class="action-group">
-                                <a class="action-btn" target="blank"
-                                    href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec2855d7d9001858538d508002c,shop_id=2c94d2aa81159c4801812a31109d10df&amp;flag=1&amp;spreadQd=20_copyurl_hd&amp;touch=20_shopzx_touch&amp;shareChannel=20_gridding_qd&amp;ad_id=2c94beae8561ed1401858611430c4fbc&amp;urlBs=04ad219434b2bff111635ec66f247391&amp;isGridding=&amp;busiOpId=&amp;taskId=null&amp;sellerXyDist=null&amp;click=&amp;jumpFlag=&amp;assistantUserInfo=null">办理链接</a>
-                        </td>
-                    </tr> -->
-                    <tr>
-                        <td>在线消耗</td>
-                        <td>免责声明：流量消耗与本站无关</td>
-                        <td>
-                            <div class="action-group">
-                                <a class="action-btn" target="blank" href="https://net.ljxnet.cn/">流量消耗</a>
-                        </td>
-                    </tr>
-                </table>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">在线消耗</div>
+                        <div class="item__desc">免责声明：流量消耗与本站无关</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://net.ljxnet.cn/">流量消耗</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section__header">定向流量</div>
+            <div class="section__header">
+                <span class="section__title">定向流量</span>
+            </div>
             <div class="section__body">
-                <table class="data-table">
-
-                    <tbody>
-                        <tr>
-                            <td>咪咕快游</td>
-                            <td>0元50G</td>
-                            <td>
-                                <div class="action-group">
-                                    <a class="action-btn" target="blank"
-                                        href="https://www.migufun.com/miguplay/html/personalTraffic/personalTrafficUp50">办理链接</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>咪咕视频</td>
-                            <td>0元30G</td>
-                            <td>
-                                <div class="action-group">
-                                    <a class="action-btn" target="blank"
-                                        href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec2821d46d1018242d4ef460054,shop_id=2c94d2aa81159c4801812a31109d10df&amp;flag=1&amp;spreadQd=20_copyurl_hd&amp;touch=20_shopzx_touch&amp;shareChannel=20_gridding_qd&amp;ad_id=2c94beae821cfbb00182439da7d75b3a&amp;urlBs=04ad219434b2bff111635ec66f247391&amp;isGridding=&amp;busiOpId=&amp;taskId=null&amp;sellerXyDist=null&amp;click=&amp;jumpFlag=&amp;assistantUserInfo=null">办理链接1</a><a
-                                        class="action-btn" target="blank"
-                                        href="http://gx.10086.cn/zt-portal/gxhzg/portal/hzg_wap/template/20220811095707301">办理链接2</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>中国移动云盘</td>
-                            <td>长期0元30G</td>
-                            <td>
-                                <div class="action-group">
-                                    <a class="action-btn" target="blank"
-                                        href="https://caiyun.feixin.10086.cn:7071/portal/caiyunOfficialAccount/index.html?path=zeroPurchase&amp;sourceid=1077">办理链接</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>移动云手机</td>
-                            <td>长期0元30G</td>
-                            <td>
-                                <div class="action-group">
-                                    <a class="action-btn" target="blank"
-                                        href="https://cpability.buy.139.com/freetraffic/#/apporder">办理链接</a>
-                            </td>
-                        </tr>
-
-                </table>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">咪咕快游</div>
+                        <div class="item__desc">0元50G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://www.migufun.com/miguplay/html/personalTraffic/personalTrafficUp50">办理链接</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">咪咕视频</div>
+                        <div class="item__desc">0元30G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://gx.10086.cn/gxwd/wdAdGoodsDetail/buyerIndex.html?2c94bec2821d46d1018242d4ef460054,shop_id=2c94d2aa81159c4801812a31109d10df&amp;flag=1&amp;spreadQd=20_copyurl_hd&amp;touch=20_shopzx_touch&amp;shareChannel=20_gridding_qd&amp;ad_id=2c94beae821cfbb00182439da7d75b3a&amp;urlBs=04ad219434b2bff111635ec66f247391&amp;isGridding=&amp;busiOpId=&amp;taskId=null&amp;sellerXyDist=null&amp;click=&amp;jumpFlag=&amp;assistantUserInfo=null">办理链接1</a>
+                        <a class="action-btn--ghost action-btn" target="_blank" href="http://gx.10086.cn/zt-portal/gxhzg/portal/hzg_wap/template/20220811095707301">办理链接2</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">中国移动云盘</div>
+                        <div class="item__desc">长期0元30G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://caiyun.feixin.10086.cn:7071/portal/caiyunOfficialAccount/index.html?path=zeroPurchase&amp;sourceid=1077">办理链接</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__info">
+                        <div class="item__name">移动云手机</div>
+                        <div class="item__desc">长期0元30G</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank" href="https://cpability.buy.139.com/freetraffic/#/apporder">办理链接</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section__header">免责声明</div>
             <div class="disclaimer">
                 <p>本网站所收集的公开资料仅供参考，具体业务详情请以广西移动官方说明为准。</p>
                 <p>客服微信: <strong>Yd55656</strong></p>
