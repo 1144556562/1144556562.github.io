@@ -51,7 +51,7 @@
             overflow: hidden;
             background: linear-gradient(120deg, #0277bd 0%, #0288d1 45%, #29b6f6 100%);
             border-radius: 18px;
-            padding: 1.75rem 1.75rem 1.9rem;
+            padding: 1.75rem;
             margin-bottom: 1.5rem;
             color: #fff;
             box-shadow: 0 10px 30px rgba(2, 119, 189, 0.28);
@@ -98,10 +98,86 @@
         }
 
         .hero__sub {
-            margin-top: 0.55rem;
+            margin-top: 0.5rem;
             color: rgba(255, 255, 255, 0.85);
             font-size: 0.9rem;
             letter-spacing: 0.04em;
+        }
+
+        /* ---------- 合作运营商入口（横幅下方独立卡片） ---------- */
+        .cta-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding: 0.85rem 1.1rem;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cta-card:hover {
+            border-color: #b3dcf5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(2, 136, 209, 0.16);
+        }
+
+        .cta-card__icon {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #0277bd, #29b6f6);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-card__text {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.35;
+        }
+
+        .cta-card__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .cta-card__desc {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-card__tag {
+            margin-left: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-light);
+            border-radius: 999px;
+            padding: 0.1rem 0.5rem;
+            vertical-align: 2px;
+        }
+
+        .cta-card__arrow {
+            margin-left: auto;
+            color: var(--primary);
+            font-size: 1.25rem;
+            line-height: 1;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-card:hover .cta-card__arrow {
+            transform: translateX(4px);
         }
 
         .brand__mark {
@@ -373,7 +449,26 @@
             }
 
             .hero {
-                padding: 1.4rem 1.2rem 1.5rem;
+                padding: 1.4rem 1.2rem 1.3rem;
+            }
+
+            .cta-card {
+                gap: 0.6rem;
+                padding: 0.75rem 0.9rem;
+                margin-bottom: 1.1rem;
+            }
+
+            .cta-card__icon {
+                width: 34px;
+                height: 34px;
+            }
+
+            .cta-card__title {
+                font-size: 0.9rem;
+            }
+
+            .cta-card__desc {
+                font-size: 0.72rem;
             }
 
             .section__header,
@@ -426,6 +521,19 @@
             <p class="hero__sub">精选套餐 · 流量优惠 ·
                 在线办理</p>
         </header>
+
+        <a class="cta-card" href="./dx.html"
+            target="_blank" rel="noopener">
+            <span class="cta-card__icon">电</span>
+            <span class="cta-card__text">
+                <span
+                    class="cta-card__title">广西电信<span
+                        class="cta-card__tag">点击跳转</span></span>
+                <span
+                    class="cta-card__desc">筹备中，页面内容较少</span>
+            </span>
+            <span class="cta-card__arrow">›</span>
+        </a>
 
         <section class="section">
             <div class="section__header">
@@ -706,7 +814,8 @@
             <div class="disclaimer">
                 <p>本网站所收集的公开资料仅供参考，具体业务详情请以广西移动官方说明为准。
                 </p>
-                <p>客服微信: <strong>Yd55656</strong>
+                <p>站长微信(非移动官方工作人员):
+                    <strong>Yd55656</strong>
                 </p>
             </div>
         </section>
