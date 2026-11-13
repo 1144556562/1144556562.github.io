@@ -304,6 +304,35 @@
             transform: translateY(-1px);
         }
 
+        .item__tag--warn {
+            color: #e65100;
+            background: #fff3e0;
+        }
+
+        /* ---------- 价格徽章 ---------- */
+        .item__price {
+            flex-shrink: 0;
+            width: 62px;
+            padding: 0.45rem 0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #fff5f2, #ffe4dc);
+            color: #d32f2f;
+            text-align: center;
+            line-height: 1.25;
+        }
+
+        .item__price b {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .item__price small {
+            display: block;
+            font-size: 0.66rem;
+            font-weight: 500;
+            color: #ef6c53;
+        }
+
         .action-group {
             display: flex;
             gap: 0.5rem;
@@ -482,6 +511,11 @@
                 padding-right: 1.1rem;
             }
 
+            /* 窄屏放不下，隐藏标题右侧备注 */
+            .section__note {
+                display: none;
+            }
+
             .section__body {
                 padding: 0.15rem 1.1rem;
             }
@@ -491,19 +525,78 @@
                 gap: 0.7rem;
             }
 
+            /* 手机端：两行卡片式布局（价格 + 名称 + 按钮 / 描述通栏） */
             .item {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0.6rem;
+                display: grid;
+                grid-template-columns: auto minmax(0, 1fr) auto;
+                grid-template-areas:
+                    "price name btn"
+                    "desc  desc desc";
+                align-items: center;
+                gap: 0.4rem 0.5rem;
+                padding: 0.85rem 0;
+                margin: 0;
+            }
+
+            /* 让名称与描述分别进入网格两行 */
+            .item__info {
+                display: contents;
+            }
+
+            .item__price {
+                grid-area: price;
+                width: auto;
+                display: inline-flex;
+                align-items: baseline;
+                gap: 2px;
+                padding: 0.12rem 0.5rem;
+                align-self: center;
+            }
+
+            .item__price b {
+                font-size: 0.92rem;
+            }
+
+            .item__price small {
+                display: inline;
+                font-size: 0.62rem;
+            }
+
+            .item__name {
+                grid-area: name;
+                min-width: 0;
+                font-size: 0.9rem;
+                line-height: 1.45;
+            }
+
+            .item__desc {
+                grid-area: desc;
+                margin-top: 0;
+                font-size: 0.75rem;
+                line-height: 1.5;
+            }
+
+            .item__tag {
+                font-size: 0.65rem;
+                padding: 0.02rem 0.38rem;
+                margin-left: 0.25rem;
             }
 
             .action-group {
-                justify-content: flex-start;
+                grid-area: btn;
+                justify-content: flex-end;
+                justify-self: end;
             }
 
             .action-btn {
-                flex: 1;
-                justify-content: center;
+                padding: 0.3rem 0.6rem;
+                font-size: 0.72rem;
+                border-radius: 8px;
+                box-shadow: none;
+            }
+
+            .action-btn:hover {
+                transform: none;
             }
 
             .brand__title {
@@ -541,94 +634,64 @@
 
         <section class="section">
             <div class="section__header">
-                <span
-                    class="section__title">业务推荐</span>
+                <span class="section__title">业务推荐</span>
+               
             </div>
             <div class="section__body">
                 <div class="item">
+                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">
-                            9.9元权益包（12个月）
-                        </div>
-                        <div class="item__desc">
-                            电表倒转，兑换支付宝5元*3张或者160权益币。
-                        </div>
+                        <div class="item__name">权益包<span class="item__tag">12个月</span></div>
+                        <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
-
                     <div class="action-group">
-                        <a class="action-btn"
-                            target="_blank"
+                        <a class="action-btn" target="_blank"
                             href="https://gd.189.cn/plus/h5/2022/cyb/index.html#/szwebHome">点击跳转</a>
                     </div>
-
                 </div>
                 <div class="item">
+                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">
-                            9.9元升5G+流量权益（12个月）
-                        </div>
-                        <div class="item__desc">
-                            电表倒转，兑换支付宝5元*3张或者160权益币。
-                        </div>
+                        <div class="item__name">升5G+流量权益<span class="item__tag">12个月</span></div>
+                        <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
-
                     <div class="action-group">
-                        <a class="action-btn"
-                            target="_blank"
+                        <a class="action-btn" target="_blank"
                             href="https://gd.189.cn/plus/h5/2022/cybv2/index.html#/goup5gv1?cmpid=qyxs-xcx-qyzq-tj-5G1gbqyb-xhy2">点击跳转</a>
                     </div>
-
-                </div>
-                                <div class="item">
-                    <div class="item__info">
-                        <div class="item__name">
-                            9.9元优惠权益包（12个月）
-                        </div>
-                        <div class="item__desc">
-                            电表倒转，兑换支付宝5元*3张或者160权益币。
-                        </div>
-                    </div>
-
-                    <div class="action-group">
-                        <a class="action-btn"
-                            target="_blank"
-                            href="https://gd.189.cn/plus/h5/2022/cyb/index.html#/newuser?cmpid=qyxs-kstg">点击跳转</a>
-                    </div>
-
                 </div>
                 <div class="item">
+                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">
-                            9.9元权益包（24个月）
-                        </div>
-                        <div class="item__desc">
-                            电表倒转，兑换支付宝5元*3张或者160权益币。
-                        </div>
+                        <div class="item__name">优惠权益包<span class="item__tag">12个月</span></div>
+                        <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
-
                     <div class="action-group">
-                        <a class="action-btn"
-                            target="_blank"
+                        <a class="action-btn" target="_blank"
+                            href="https://gd.189.cn/plus/h5/2022/cyb/index.html#/newuser?cmpid=qyxs-kstg">点击跳转</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
+                    <div class="item__info">
+                        <div class="item__name">权益包<span class="item__tag">24个月</span><span class="item__tag item__tag--warn">与下方互斥，二选一</span></div>
+                        <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
+                    </div>
+                    <div class="action-group">
+                        <a class="action-btn" target="_blank"
                             href="https://gd.189.cn/plus/h5/2022/cyb/index.html#/cyxy">点击跳转</a>
                     </div>
-
                 </div>
-                                <div class="item">
+                <div class="item">
+                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">
-                            9.9元（生活服务）权益包（24个月）
-                        </div>
-                        <div class="item__desc">
-                            电表倒转，3张*5元生活缴费券、1张3元支付宝通用红包券，与上面互斥。
-                        </div>
+                        <div class="item__name">生活服务权益包<span class="item__tag">24个月</span><span class="item__tag item__tag--warn">与上方互斥，二选一</span></div>
+                        <div class="item__desc">3张*5元生活缴费券、1张3元支付宝通用红包券</div>
                     </div>
-
                     <div class="action-group">
-                        <a class="action-btn"
-                            target="_blank"
-                            href=" https://gd.189.cn/plus/h5/2022/cybv2/index.html#/shfw?cmpid=qyxs-xcx-qyzq-spt-shfwb-xhy2">点击跳转</a>
+                        <a class="action-btn" target="_blank"
+                            href="https://gd.189.cn/plus/h5/2022/cybv2/index.html#/shfw?cmpid=qyxs-xcx-qyzq-spt-shfwb-xhy2">点击跳转</a>
                     </div>
-
                 </div>
 
 
