@@ -309,30 +309,6 @@
             background: #fff3e0;
         }
 
-        /* ---------- 价格徽章 ---------- */
-        .item__price {
-            flex-shrink: 0;
-            width: 62px;
-            padding: 0.45rem 0;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #fff5f2, #ffe4dc);
-            color: #d32f2f;
-            text-align: center;
-            line-height: 1.25;
-        }
-
-        .item__price b {
-            font-size: 1.2rem;
-            font-weight: 800;
-        }
-
-        .item__price small {
-            display: block;
-            font-size: 0.66rem;
-            font-weight: 500;
-            color: #ef6c53;
-        }
-
         .action-group {
             display: flex;
             gap: 0.5rem;
@@ -525,13 +501,13 @@
                 gap: 0.7rem;
             }
 
-            /* 手机端：两行卡片式布局（价格 + 名称 + 按钮 / 描述通栏） */
+            /* 手机端：两行卡片式布局（名称 + 按钮 / 描述通栏） */
             .item {
                 display: grid;
-                grid-template-columns: auto minmax(0, 1fr) auto;
+                grid-template-columns: minmax(0, 1fr) auto;
                 grid-template-areas:
-                    "price name btn"
-                    "desc  desc desc";
+                    "name btn"
+                    "desc desc";
                 align-items: center;
                 gap: 0.4rem 0.5rem;
                 padding: 0.85rem 0;
@@ -541,25 +517,6 @@
             /* 让名称与描述分别进入网格两行 */
             .item__info {
                 display: contents;
-            }
-
-            .item__price {
-                grid-area: price;
-                width: auto;
-                display: inline-flex;
-                align-items: baseline;
-                gap: 2px;
-                padding: 0.12rem 0.5rem;
-                align-self: center;
-            }
-
-            .item__price b {
-                font-size: 0.92rem;
-            }
-
-            .item__price small {
-                display: inline;
-                font-size: 0.62rem;
             }
 
             .item__name {
@@ -639,9 +596,8 @@
             </div>
             <div class="section__body">
                 <div class="item">
-                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">权益包<span class="item__tag">12个月</span></div>
+                        <div class="item__name">9.9元权益包（12个月）</div>
                         <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
                     <div class="action-group">
@@ -650,9 +606,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">升5G+流量权益<span class="item__tag">12个月</span></div>
+                        <div class="item__name">9.9元升5G+流量权益（12个月）</div>
                         <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
                     <div class="action-group">
@@ -661,9 +616,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">优惠权益包<span class="item__tag">12个月</span></div>
+                        <div class="item__name">9.9元优惠权益包（12个月）</div>
                         <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
                     <div class="action-group">
@@ -672,9 +626,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">权益包<span class="item__tag">24个月</span><span class="item__tag item__tag--warn">与下方互斥，二选一</span></div>
+                        <div class="item__name">9.9元权益包（24个月）<span class="item__tag item__tag--warn">与下方互斥，二选一</span></div>
                         <div class="item__desc">兑换支付宝5元*3张或者160权益币。</div>
                     </div>
                     <div class="action-group">
@@ -683,9 +636,8 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item__price"><b>9.9</b><small>元/月</small></div>
                     <div class="item__info">
-                        <div class="item__name">生活服务权益包<span class="item__tag">24个月</span><span class="item__tag item__tag--warn">与上方互斥，二选一</span></div>
+                        <div class="item__name">9.9元（生活服务）权益包（24个月）<span class="item__tag item__tag--warn">与上方互斥，二选一</span></div>
                         <div class="item__desc">3张*5元生活缴费券、1张3元支付宝通用红包券</div>
                     </div>
                     <div class="action-group">
